@@ -19,7 +19,7 @@ $(document).ready(function(){
                               },
                               success: function(data){  
                                     
-                                    if(data == "<span style='font-weight:bold;color:red;'>El nombre de usuario ya existe.</span>"){
+                                    if(data == "<span style='font-weight:bold;color:red;'>El correo de usuario ya existe.</span>"){
                                         $("#login-submit").hide(); 
                                         $("#resultado").html(data); 
                                     } 

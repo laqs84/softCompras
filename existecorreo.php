@@ -2,14 +2,10 @@
       $user = $_POST['b'];
        
       if(!empty($user)) {
-            comprobar($user);
-      }
-       
-      function comprobar($b) {
             require 'database.php';
             
             
-            $sql = "SELECT * FROM users WHERE u_email = '$b'";
+            $sql = "SELECT * FROM users WHERE u_email = '$user'";
             $resultado = $conexion->query($sql);
        
             

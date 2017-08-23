@@ -75,8 +75,8 @@ if($_POST) {
                         </div>
                         <div class="form-group">
                             <label for="name">Email:</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Nombre">
-                            <span class="help-inline"><?php echo $nameError;?></span>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            <span id="resultado" class="help-inline"></span>
                         </div>
                         <div class="form-group">
                             <label for="name">Level:</label>
@@ -88,7 +88,7 @@ if($_POST) {
                         </div>
                         <br>
                         <div class="form-actions">
-                            <p><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span> Crear</button>
+                            <p><button id="login-submit" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span> Crear</button>
                             </p>
                             <a class="btn btn-primary" href="user.php"><span class="glyphicon glyphicon-arrow-left"></span> Regresar</a>
                        </div>

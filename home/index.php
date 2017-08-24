@@ -1,8 +1,14 @@
 <?php
 session_start();
+if ((@$_SESSION['is_auth'] == '')) {
+	
+      header("location:../index.php");
+
+}
+
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">

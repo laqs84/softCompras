@@ -24,7 +24,7 @@ while($row = $statement->fetch()) {
 	    Acción <span class="caret"></span>
 	  </button>
 	  <ul class="dropdown-menu">
-	    <li><a type="button" href="userupdate.php?id=' . $userId . '"><i class="glyphicon glyphicon-edit"></i> Editar</li>
+	    <li><a type="button" href="editUsers.php?id=' . $userId . '"><i class="glyphicon glyphicon-edit"></i> Editar</li>
 	    <li><a type="button" href="userdelete.php?id=' . $userId . '"><i class="glyphicon glyphicon-trash"></i> Eliminar</a></li>       
 	  </ul>
 	</div>';

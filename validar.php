@@ -27,7 +27,7 @@
                                         
                                         
                                         if($_SESSION['user_level'] != 1){
-					header('location: home.php');
+					header('location: home/index.php');
                                         }
                                         else {
                                         header('location: admin/index.php');    

@@ -8,7 +8,8 @@
 	  </button>
 	  <ul class="dropdown-menu">
 	    
-	    <li><a type="button"  href="../perfil.php?id=<?php echo $_SESSION['user_id'];?>"> <i class="glyphicon glyphicon-user"></i> Perfil</a></li>       
+            <li><a type="button"  href="../"> <i class="glyphicon glyphicon-home"></i> Sitio</a></li>
+            <li><a type="button"  href="../perfil.php?id=<?php echo $_SESSION['user_id'];?>"> <i class="glyphicon glyphicon-user"></i> Perfil</a></li>
             <li><a type="button"  href="../logout.php"> <i class="glyphicon glyphicon-log-out"></i> Salir</a></li>
 	  </ul>
     </div>

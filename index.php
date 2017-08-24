@@ -59,41 +59,7 @@ if (isset($_SESSION["is_auth"])) {
         </div>
         <div class="container site">
             <h1 class="text-logo"><span class="glyphicon glyphicon-cutlery"></span> <?php echo @$_SESSION['Titulo']; ?> <span class="glyphicon glyphicon-cutlery"></span></h1>
-            <div class="login-name">
-                <?php
-                if ($user) {
-                    ?>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php
-                            echo $user;
-                            ?> 
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-
-                            <li><a type="button"  href="perfil.php?id=<?php echo $_SESSION['user_id']; ?>"> <i class="glyphicon glyphicon-user"></i> Perfil</a></li>       
-                            <li><a type="button"  href="logout.php"> <i class="glyphicon glyphicon-log-out"></i> Salir</a></li>
-                        </ul>
-                    </div>
-                    <?php
-                } else {
-                    ?> 
-                    <a href="login.php">Entrar a Comprar</a>
-                    <?php
-                }
-                ?>
-                <div id="cart">
-               <!--<img src="img/cart.png">-->
-                    <div class="producto">
-                        <p class="nombre"></p>
-                        <p class="cantidad"></p>
-                        <p class="precio"></p>
-                        <p class="delete"></p>
-                    </div>
-                </div>
-
-            </div>
+            <?php include 'menuperfil.php'; ?>
             <?php include 'menu.php'; ?>
             <div class="tab-content">
                 <?php include 'listaproducts.php'; ?>  

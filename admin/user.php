@@ -38,7 +38,7 @@
                                         <th>Telefono</th>
                                         <th>Direccion</th>
                                         <th>Email</th>
-                                        <th>Level</th
+                                        <th>Level</th>
                                         <th style="width:15%;">Opciones</th>
                                     </tr>
                                 </thead>

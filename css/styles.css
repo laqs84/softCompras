@@ -230,9 +230,10 @@ display: block;
         padding:0px;
 }
 .products-promo li{
-        display:inline;
-        float:left;
-        margin:10px;
+    display: table;
+    float: left;
+    margin: 10px;
+    width: 17%;
 }
 .item-promo{
         display:block;
@@ -243,7 +244,6 @@ display: block;
         margin:0;
         font-weight:bold;
         text-align:center;
-        color:#c3c3c3;
 }
 .cart-promo{
         float:right;

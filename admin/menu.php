@@ -20,5 +20,6 @@
         <li class="products site"><a href="index.php">Productos</a></li>
         <li class="categories site"><a href="categories.php">Categorias</a></li>
         <li class="user site"><a href="user.php">Usuarios</a></li>
+        <li class="site promotions"><a href="promotions.php">Promociones</a></li
     </ul>
 </nav>

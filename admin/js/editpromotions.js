@@ -1,35 +1,3 @@
-$(function () {
-    $('#cartcontent').datagrid({
-        singleSelect: true,
-        showFooter: true
-    });
-    $('.item-promo').draggable({
-        revert: true,
-        proxy: 'clone',
-        onStartDrag: function () {
-            $(this).draggable('options').cursor = 'not-allowed';
-            $(this).draggable('proxy').css('z-index', 10);
-        },
-        onStopDrag: function () {
-            $(this).draggable('options').cursor = 'move';
-        }
-    });
-    $('.cart-promo').droppable({
-        onDragEnter: function (e, source) {
-            $(source).draggable('options').cursor = 'auto';
-        },
-        onDragLeave: function (e, source) {
-            $(source).draggable('options').cursor = 'not-allowed';
-        },
-        onDrop: function (e, source) {
-            var name = $(source).find('p:eq(0)').html();
-            var price = $(source).find('p:eq(1)').html();
-            var id = $(source).find('p:eq(2)').html();
-            addProduct(name, parseFloat(price.split('₡')[1]), id);
-        }
-    });
-});
-
 function addProduct(name, price, id) {
     var dg = $('#cartcontent');
     var data = dg.datagrid('getData');
@@ -93,6 +61,9 @@ function deleteproduct(name)
     dg.datagrid('reloadFooter', [{name: 'Total', price: cost}]);
 
 }
+
+
+
 
             function update_calendar() {
                 var month = $('#calendar_mes').attr('value');

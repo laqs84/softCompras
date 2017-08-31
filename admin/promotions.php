@@ -40,13 +40,14 @@
                             <div class="remove-messages"></div>
 
                             <div class="div-action pull pull-right" style="padding-bottom:20px;">
-                                <a class="btn btn-default button1" id="addPromotionsModalBtn" href="createPromotions.php"> <i class="glyphicon glyphicon-plus-sign"></i> Agregar categoría </a>
+                                <a class="btn btn-default button1" id="addPromotionsModalBtn" href="createPromotions.php"> <i class="glyphicon glyphicon-plus-sign"></i> Agregar promocion </a>
                             </div> <!-- /div-action -->				
 
                         </div>
                         <table class="table" id="managePromotionsTable">
                             <thead>
                                 <tr>
+                                    <th>Nombre</th>
                                     <th>Productos</th>
                                     <th>Precio</th>
                                     <th>Fecha Inicio</th>

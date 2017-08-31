@@ -11,12 +11,15 @@ $output = array('data' => array());
 
 while ($row = $statement->fetch()) {
     $promotionsId = $row[0];
-
+    $hoy=date("Y-m-d");
+    if ($row[5]<$hoy){
+        $row[5] = $row[5].' <span style="color:red;">Cambie la fecha final por una fecha mayor que hoy </span>';
+    }
     $products = "";
-    $var = explode(',', $row[1]);
+    $var = explode(',', $row[2]);
     foreach ($var as $row2) {
 
-        if ($row2 != "") {
+        if ($row2 != "" && !empty($row2)) {
             $statementp = $db->query('SELECT * FROM products WHERE p_id =' . $row2);
             
             while ($rowp = $statementp->fetch()) {
@@ -39,10 +42,11 @@ while ($row = $statement->fetch()) {
 	</div>';
 
     $output['data'][] = array(
+        $row[1],
         $products,
-        $row[2],
         $row[3],
         $row[4],
+        $row[5],
         $button
     );
 } // /while 

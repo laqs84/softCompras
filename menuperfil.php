@@ -26,6 +26,7 @@
                     <?php
                 }
                 ?>
+                 
                 <div id="cart">
                <!--<img src="img/cart.png">-->
                     <div class="producto">

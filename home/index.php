@@ -6,6 +6,25 @@ if ((@$_SESSION['is_auth'] == '')) {
 
 }
 
+
+require '../admin/database.php';
+$db = Database::connect();
+
+$statement = $db->query('SELECT * FROM `promociones`');
+$hoy=date("Y-m-d");
+$statementcount = $db->query('SELECT COUNT(*) FROM `promociones` WHERE fechafinal>="'.$hoy.'"');
+ if ($data = $statementcount->fetch()) {
+             if($data[0] <= 0)
+            {
+                $data = 'No hay Promociones';
+                $caret = 0;
+             }
+             else{
+                 $data = 'Hay '.$data[0].' Promociones nuevas';
+                 $caret = 1;
+             }
+    }
+ 
 ?>
 <!doctype html>
 <html lang="es">
@@ -63,11 +82,24 @@ if ((@$_SESSION['is_auth'] == '')) {
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="ti-bell"></i>
-                                        <p>Promociones</p>
+                                        <p><?php echo $data;?></p>
+                                        <?php if ($caret != 0){?>
                                         <b class="caret"></b>
+                                        <?php }?>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Notification 1</a></li>
+                                        
+                                        <?php 
+                                        while ($row = $statement->fetch()) {
+                                            $promotionsId = $row[0];
+                                            $hoy=date("Y-m-d");
+                                            if ($row[5]>=$hoy){
+                                                    $promo = $row[1];
+                                                    echo " <li><a href='#'>".$promo."</a></li>";
+                                            }
+                                        } // /while 
+                                        ?>
+                                       
 
                                     </ul>
                                 </li>
